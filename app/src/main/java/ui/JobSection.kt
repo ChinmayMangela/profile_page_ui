@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,14 +28,14 @@ fun JobSection() {
         verticalArrangement = Arrangement.Center,
         modifier = Modifier.padding(10.dp)
     ) {
-        TextComponent(text = "Jobs Done", color = Color.Black, fontSize = 20.sp)
+        Text(text = "Jobs Done", color = Color.Black, fontSize = 20.sp)
         JobListComponent()
     }
 }
 
 
 @Composable
-fun JobListComponent() {
+private fun JobListComponent() {
     LazyRow(
         modifier = Modifier.padding(vertical = 10.dp)
     ) {
@@ -45,7 +46,7 @@ fun JobListComponent() {
 }
 
 @Composable
-fun JobTileComponent(job: Job) {
+private fun JobTileComponent(job: Job) {
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
@@ -57,6 +58,6 @@ fun JobTileComponent(job: Job) {
                 shape = RoundedCornerShape(10.dp)
             )
     ) {
-       TextComponent(text = job.name, color = Color.Red, fontSize = 12.sp)
+       Text(text = job.name, color = Color.Red, fontSize = 12.sp)
     }
 }
