@@ -17,8 +17,8 @@ fun ProfilePage(
         position = "Open",
         jobsDone = jobs
     )
-   Column(
-   ) {
+   Column {
        UserProfileHeaderComponent(personInfo)
+       JobSection()
    }
 }
